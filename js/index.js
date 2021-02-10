@@ -50,8 +50,7 @@
 class Gallery {
     constructor() {
         this.sliderList = document.querySelector('.slider__list')
-        this.sliderItem = document.querySelectorAll('.slider__item ')
-        this.sliderImg = null
+        this.sliderItem = null
 
         this.prev = document.querySelector('.prev')
         this.next = document.querySelector('.next')
@@ -60,10 +59,25 @@ class Gallery {
         this.next.addEventListener('click', this.clickOnNext)
 
         this.src = null
-        this.stepImg = 0
+        this.stepImg = 0  // шаг - опред. какую картинку показывать в основном блоке
+        this.offsetImg = 0
     }
 
+    templateImg = (src) => `
+        <li class="slider__item">
+            <img class="slider__img" src="${ src }" alt="img"/>
+        </li>`
+
+    renderTemplate = (container, template, position = 'beforeend') => {
+        if (container instanceof Element) {
+            container.insertAdjacentHTML(position, template)
+        }
+    }
+
+    // 1
     getSrc = () => {
+        console.log('[1] getSrc')
+
         this.src = [
             'img/1.jpg',
             'img/2.jpg',
@@ -74,18 +88,30 @@ class Gallery {
         ]
     }
 
+    // 2
     renderImage = () => {
-        console.log('render image')
+        console.log('[2] render image')
+
+        for (let i = 0; i < this.src.length; i++) {
+            this.renderTemplate(this.sliderList, this.templateImg(this.src[i]))
+        }
+    }
+
+    // 3
+    offsetImage = () => {
+        console.log('[3] offsetImage')
+
+        this.sliderItem = document.querySelectorAll('.slider__item ')
 
         this.sliderItem.forEach(item => {
-            const img = document.createElement('img')
-            img.classList.add('slider__img')
-            img.setAttribute('src', this.src[this.stepImg])
-
-            this.stepImg++
-            item.append(img)
+            item.style.transform = `translateX(${ this.offsetImg * 250 }px)`
+            this.offsetImg++
         })
+
+        console.log(this.offsetImg)
     }
+
+
 
     clickOnPrev = () => {
         this.sliderImg = document.querySelectorAll('.slider__img')
@@ -98,9 +124,11 @@ class Gallery {
     }
 
     init = () => {
-        console.log('Gallery INIT')
-        this.getSrc()
-        this.renderImage()
+        console.log('[0] Gallery INIT')
+        this.getSrc()        // [1]
+        this.renderImage()   // [2]
+        this.offsetImage()   // [3]
+
     }
 }
 
