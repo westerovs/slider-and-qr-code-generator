@@ -5,7 +5,7 @@
 	<meta charset="UTF-8">
 	<!--    <meta name="viewport" content="width=device-width, initial-scale=1">-->
 	<meta name="viewport"
-		  content="width=device-width, user-scalable=no,initial-scale=auto, maximum-scale=1, minimum-scale=0.7">
+		  content="width=device-width, user-scalable=no,initial-scale=auto, maximum-scale=1, minimum-scale=0.4">
 	<meta name="keywords" content="меню">
 	<link rel="shortcut icon" href="#" type="image/x-icon">
 	<title>v3 lib</title>
@@ -22,30 +22,17 @@
 <div class="wrapper">
 	<div class="swiper-container">
 		<div class="swiper-wrapper">
-			<div class="swiper-slide" style="background-image:url(./img/1.jpg)"><span>1</span></div>
-			<div class="swiper-slide">
-				<img class="slider-img" src="img/1.jpg" alt="">
-				<span>2</span>
-			</div>
-			<div class="swiper-slide">
-				<img class="slider-img" src="img/2.jpg" alt="">
-				<span>3</span>
-			</div>
-			<div class="swiper-slide">
-				<img class="slider-img" src="img/3.jpg" alt="">
-				<span>4</span>
-			</div>
-			<div class="swiper-slide">
-				<img class="slider-img" src="img/4.jpg" alt="">
-				<span>5</span>
-			</div>
-			<div class="swiper-slide">
-				<img class="slider-img" src="img/5.jpg" alt="">
-				<span>6</span>
-			</div>
+			<!-- render from template -->
 		</div>
 	</div>
 </div>
+
+<template class="swiper-template">
+	<div class="swiper-slide">
+		<img class="slider-img" src="" alt="изображение мероприятия">
+		<span>1</span>
+	</div>
+</template>
 
 
 <script src="https://unpkg.com/swiper/swiper-bundle.js"></script>

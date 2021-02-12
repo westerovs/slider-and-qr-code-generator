@@ -43,7 +43,7 @@ span {
     padding-top: 50px;
     padding-bottom: 50px;
     width: 415px;
-    overflow: hidden;
+    /*overflow: hidden;*/
 }
 
 /* ================================= */
