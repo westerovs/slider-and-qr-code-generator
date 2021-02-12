@@ -45,7 +45,7 @@ async function response() {
             pagination: {
                 el: '.swiper-pagination',
             },
-            loop: (slidesElement.length >= 3),
+            loop: (slidesElement.length >= 3), // если > то бесконечность и ещё дальше !
         });
     })
 }

@@ -1,0 +1,52 @@
+{
+  "events": [
+    {
+      "id": "0000000001",
+      "idroom": "0000000001",
+      "description": "1 events la-la-la",
+      "descriptionTranslations": [],
+      "src": "img/1.jpg",
+      "link": "google.com"
+    },
+    {
+      "id": "0000000002",
+      "idroom": "0000000002",
+      "description": "2 events la-la-la",
+      "descriptionTranslations": [],
+      "src": "img/2.jpg",
+      "link": "google.com"
+    },
+    {
+      "id": "0000000003",
+      "idroom": "0000000003",
+      "description": "3 events la-la-la",
+      "descriptionTranslations": [],
+      "src": "img/3.jpg",
+      "link": "google.com"
+    },
+    {
+      "id": "0000000004",
+      "idroom": "0000000004",
+      "description": "4 events la-la-la",
+      "descriptionTranslations": [],
+      "src": "img/4.jpg",
+      "link": "google.com"
+    },
+    {
+      "id": "0000000005",
+      "idroom": "0000000005",
+      "description": "5 events la-la-la",
+      "descriptionTranslations": [],
+      "src": "img/5.jpg",
+      "link": "google.com"
+    },
+    {
+      "id": "0000000006",
+      "idroom": "0000000006",
+      "description": "2 events la-la-la",
+      "descriptionTranslations": [],
+      "src": "img/6.jpg",
+      "link": "google.com"
+    }
+  ]
+}
